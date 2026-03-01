@@ -1,0 +1,120 @@
+/* === AUTH PAGE STYLING (REGISTER / LOGIN) === */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+}
+
+/* floating animated circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.2;
+  animation: float 8s ease-in-out infinite;
+}
+.circle.one {
+  width: 200px;
+  height: 200px;
+  background: #00c9a7;
+  top: 10%;
+  left: 15%;
+}
+.circle.two {
+  width: 250px;
+  height: 250px;
+  background: #6c63ff;
+  bottom: 15%;
+  right: 20%;
+  animation-delay: 2s;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-30px); }
+}
+
+/* container */
+.auth-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 380px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* title */
+.auth-container h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+/* input fields */
+.auth-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.auth-container input:focus {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 10px #6c63ff;
+}
+
+/* glowing button */
+.auth-container button {
+  width: 100%;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #6c63ff, #00c9a7);
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.auth-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(108,99,255,0.5);
+}
+
+/* link text */
+.auth-container a {
+  color: #00c9a7;
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-container a:hover {
+  text-decoration: underline;
+}
